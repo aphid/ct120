@@ -1,4 +1,4 @@
-# Introduction to Creative Coding
+# Intermediate Creative Coding
 
 An up to date version of this syllabus can be found at: https://aphid.github.io/ct120/syllabus.html. 
 
