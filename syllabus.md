@@ -243,7 +243,6 @@ The general arc of the class will be 5ish weeks of client-side (browser-based) J
 
 
 ## Week 7:  (May 12, 14)
-*   **Project**
 * **Tuesday**: UI work and other research, Lilly Selzer
 * **Thursday**: co(de)-working
 
