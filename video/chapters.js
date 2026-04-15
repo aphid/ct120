@@ -7,6 +7,7 @@ for (let vid of vids) {
         for (let t of vid.textTracks) {
             if (t.kind === "chapters") {
                 console.log(t.readyState);
+                console.log(t);
                 console.log("found chapters");
                 t.addEventListener("load", function () {
                     console.log("eep");
