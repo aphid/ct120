@@ -15,7 +15,7 @@ for (let vid of vids){
 function processChapters(vid,track){
     let id = vid.closest("section").id;
     let cues = track.cues;
-
+    console.log(cues.length);
     let sec = `<section id=${id}_chapters>
         <ul>`;
     for (let cue of cues){
