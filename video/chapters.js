@@ -6,7 +6,7 @@ for (let vid of vids){
     for (let t of vid.textTracks){
         if(t.kind === "chapters"){
 
-            t.addEventListener("loaded", function(){
+            t.addEventListener("load", function(){
                 console.log("eep");
             });
             //console.log("processing", vid, t);
