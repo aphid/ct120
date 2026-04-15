@@ -1,40 +1,36 @@
-let vids = document.querySelectorAll("video");
+let tracks = document.querySelectorAll("track");
 //console.log("okay!");
 
-for (let vid of vids) {
-    console.log("trying", vid);
-    for (let t of vid.textTracks) {
-        if (t.kind === "chapters") {
-            console.log(t.readyState);
-            console.log(t);
-            console.log("found chapters");
-            t.addEventListener("load", function () {
-                console.log("eep");
-                processChapters(vid, t);
-
-            });
-
-            t.addEventListener("loaded", function () {
-                console.log("eep");
-                processChapters(vid, t);
-
-            });
-            for (let cue of t.cues){
-                console.log(cue.text);
-            }
-            //conso
-            //console.log("processing", vid, t);
-        }
-
+for (let t of tracks) {
+    if (track.kind !== "chapters"){
+        continue;
     }
+    let vid = t.closest("video");
+    console.log("trying", vid);
+    if (t.readyState < 2){
+        t.addEventListener("loaded",function(){
+            processChapters(vid,t);
+        });
+    } else {
+        processChapters(vid,t);
+    }
+    
 
 
 
 }
 
 function processChapters(vid, track) {
+    let vtracks = vid.textTracks;
+    let trk;
+    for (let t of vtracks){
+        if (t.kind === "chapter"){
+            trk = t;
+        }
+    }
+
     let id = vid.closest("section").id;
-    let cues = track.cues;
+    let cues = trk.cues;
     console.log(cues.length);
     let sec = `<section id=${id}_chapters>
         <ul>`;
