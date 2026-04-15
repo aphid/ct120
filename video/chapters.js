@@ -10,7 +10,7 @@ for (let t of tracks) {
     console.log(t.readyState);
     if (t.readyState < 2){
         console.log("track hasn't loaded yet.")
-        t.addEventListener("loaded",function(){
+        t.addEventListener("load",function(){
             console.log("now it has.")
             processChapters(vid,t);
         });
