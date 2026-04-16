@@ -11,7 +11,8 @@
         font-family: sans-serif;
         background: #DFC9DF;
         background: radial-gradient(circle, rgba(223, 201, 223, 1) 0%, rgba(201, 223, 223, 1) 50%, rgba(206, 184, 206, 1) 100%);
-        margin: 20px;
+        margin: 0;
+        padding: 14px;
         font-size: 1.5em;
     }
 
@@ -64,6 +65,8 @@
         border: 1px dotted rgba(58, 59, 60, 0.5);
         padding: 8px;
         margin-bottom: 15px;
+        backdrop-filter: contrast(90%);
+        box-shadow:rgba(15, 0, 13, 0.3) 5px 5px 50px;
     }
 </style>
 
@@ -71,17 +74,16 @@
 <body>
 
     <h1>ct 120 videos</h1>
-    <div>
+    <div id="toc">
         <h3>table of contents</h3>
         <ul>
-            <li><a href="#chessboard">🏁 chessboard 🏁</a></li>
         </ul>
         <p><span class="disc">disclaimer:</span> captions are generated using speech recognition (locally run, open source model). I've done an editing pass to catch the glaring mistakes, but there will probably still be errors.</p>
 
         <p>raw video & transcripts can be found <a href="https://aphid.org/ct120/video/">in this directory</a>.</p>
     </div>
 
-    <section id="chessboard">
+    <section class="tutorial" id="chessboard">
         <h3>🏁 chessboard 🏁 (pt1)</h3>
         <p>working through the chessboard exercise</p>
         <video controls crossorigin="anonymous" src="https://aphid.org/ct120/video/chessboard_.mp4">
@@ -103,8 +105,26 @@
             </ul>
     </section>
 
-<script src="chapters.js" defer></script>
+    <section class="tutorial" id="chessboard2">
+        <h3>🏁🌈 chessboard 🌈🏁 (pt2) </h3>
+        <p>2 p5 2 p5urious? 😬</p>
+        <video controls crossorigin="anonymous" src="https://aphid.org/ct120/video/chessboard2.mp4">
+            <track crossorigin="anonymous" kind="captions" src="https://aphid.org/ct120/video/chessboard2.en.vtt" srclang="en" default>
+            <track crossorigin="anonymous" kind="chapters" src="https://aphid.org/ct120/video/chessboard2.chapters.vtt" srclang="en" default>
+        </video>
 
+        <nav></nav>
+        <p>notes: i added noStroke() to the multicolor sketch and gave the colors more 🌈 energy</p>
+        <ul>
+            <li><a href="https://editor.p5js.org/aphid/sketches/w6fE0Y4QH">chessboard p5 sketch</a></li>
+            <li><a href="https://editor.p5js.org/aphid/sketches/ejEiFnp-E">multicolor p5 sketch</a></li>
+            <li>ska? don't mind if i do: <a href="https://www.youtube.com/watch?v=YogOkzhoG5Q">Dom Drummond &amp; the Skatalites: Man in the Street</a></li>
+            <li>idea: what if instead of using the square() function, you made objects with stored coordinates and colors that draw the squares in the draw loop in the same order as above, but then they start to drift around, or maybe you add a gravity function (some great physics stuff in The Nature of Code you could use for this)</li>
+        </ul>
+    </section>
+
+<script src="chapters.js" defer></script>
+<script src="toc.js" defer></script>
 </body>
 
 </html>

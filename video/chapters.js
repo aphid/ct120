@@ -6,16 +6,12 @@ for (let t of tracks) {
         continue;
     }
     let vid = t.closest("video");
-    console.log("trying", vid);
-    console.log(t.readyState);
     if (t.readyState < 2){
-        console.log("track hasn't loaded yet.")
         t.addEventListener("load",function(){
-            console.log("now it has.")
             processChapters(vid,t);
         });
     } else {
-        console.log("track has loaded");
+        console.log("track", t.src, "has loaded");
         processChapters(vid,t);
     }
     
@@ -36,9 +32,7 @@ function processChapters(vid, track) {
     console.log(trk);
     let id = vid.closest("section").id;
     let cues = trk.cues;
-    console.log(cues.length);
-    let sec = `<section id=${id}_chapters>
-    <details><summary>Chapters</summary>
+    let sec = `<details id=${id}_chapters><summary>Chapters (${cues.length})</summary>
         <ul>`;
     for (let cue of cues) {
         sec += `<li><a class="chapterlink" href="#" data-start="${cue.startTime}">${cue.text}</a></li>`;
