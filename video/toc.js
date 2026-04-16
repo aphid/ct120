@@ -6,7 +6,7 @@ for (let i = 0; i < tuts.length; i++) {
     let title = tut.querySelector("h3").textContent;
     let id = tut.id;
     let vid = tut.querySelector("video");
-    let link = `<a href="#${id}">${title}</a>`;
+    let link = `<a href="#${id}">${title}</a> <span class="duration"></span>`;
     let li = document.createElement("li");
 
     li.innerHTML = link;
@@ -31,8 +31,10 @@ for (let i = 0; i < tuts.length; i++) {
                 if (parseInt(dur[2])) {
                     duration += `${dur[2]}s`;
                 }
-            }            
-            li.innerHTML = `<a href="#${id}">${title}</a> <span title="${hms}">${duration}</span>`;
+            }
+            let durspan = li.querySelector(".duration");
+            durspan.textContent = duration;
+            durspan.style.opacity = 1;
         }, once = true);
     }
 
