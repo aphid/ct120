@@ -26,6 +26,7 @@ An up to date version of this syllabus can be found at: https://aphid.github.io/
 
 *   **[Course Canvas]()**
 *   **[Course Zoom]()**
+*   **[Videos](https://aphid.github.io/ct120/video/)  //note, stuff recorded during class is in the YuJa section on Canvas!
 *   **[Readings]()**
 *   **[Office Hour Info]()** (zoom links here)
 

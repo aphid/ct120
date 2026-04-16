@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>html board</title>
+
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            background: gray;
+        }
+
+        .square {
+            display: inline-block;
+        }
+
+        @keyframes blk2purp {
+            from {
+                background-color: black;
+            }
+
+            to {
+                background-color: purple;
+            }
+        }
+
+        @keyframes white2purp {
+            from {
+                background-color: white;
+            }
+
+            to {
+                background-color: purple;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+</body>
+
+<script>
+    let thecount = 8;
+    let colors = ["black", "white"];
+    let anims = ["blk2purp", "white2purp"];
+
+    for (let i = 0; i < thecount; i++) {
+
+        for (let j = 0; j < thecount; j++) {
+            if ((i + j) % 2 == 0) {
+                square(0);
+            } else {
+                square(1);
+            }
+        }
+        let br = document.createElement("br");
+        document.body.appendChild(br);
+    }
+
+
+    function square(color) {
+        let mode = "background"; //change to animation for animation!
+
+        let div = document.createElement("div");
+        div.style.height = `${100 / thecount}vw`;
+        div.style.width = `${100 / thecount}vw`;
+        if (mode == "background") {
+            div.style.background = colors[color];
+        } else if (mode == "animation") {
+            let anim = anims[color] + " 3s linear infinite alternate";
+            div.style.animation = anim;
+        }
+        div.innerHTML = "&nbsp;";
+        div.classList.add("square");
+        document.body.appendChild(div);
+    }
+</script>
+
+</html>

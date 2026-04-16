@@ -34,15 +34,16 @@
 
         // Board Materials
         const whiteMat = new THREE.MeshStandardMaterial({
-            color: 0x9900ff
+            color: 0xffffff
         })
         const blackMat = new THREE.MeshStandardMaterial({
             color: 0x000000
         })
 
-        const pwMat = new THREE.MeshStandardMaterial({
-            color: 0xffefd5
+        const purpMat = new THREE.MeshStandardMaterial({
+            color: 0xCC00CC
         })
+
 
         // Board Geometry
         const tileShape = new THREE.BoxGeometry(1, 1, 1);
@@ -59,10 +60,10 @@
 
         // Function for creating the board
         const makeBoard3 = function () {
-            var size = 8;
+            var size = 30;
             for (let i = 0; i < size; i++) {
                 for (let j = 0; j < size; j++) {
-                    if ((i + j) % 3== 0) {
+                    if ((i + j) % 3 == 0) {
                         let tile = new THREE.Mesh(tileShape, whiteMat);
                         tile.position.set(i - 3.5, j - 3.5, 0);
                         board.add(tile);
@@ -70,12 +71,12 @@
                         let line = new THREE.LineSegments(wireframe, matLineBasic);
                         line.position.set(i - 3.5, j - 3.5, 0);
                         board.add(line);
-                    } else if ((i + j) % 3 == 1) {
-                        let tile = new THREE.Mesh(tileShape, blackMat);
+                    } else if ((i + j) % 3 == 1){
+                        let tile = new THREE.Mesh(tileShape, purpMat);
                         tile.position.set(i - 3.5, j - 3.5, 0);
                         board.add(tile);
                     } else {
-                         let tile = new THREE.Mesh(tileShape, pwMat);
+                        let tile = new THREE.Mesh(tileShape, blackMat);
                         tile.position.set(i - 3.5, j - 3.5, 0);
                         board.add(tile);
                     }
