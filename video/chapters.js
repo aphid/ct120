@@ -38,7 +38,8 @@ function processChapters(vid, track) {
         sec += `<li><a class="chapterlink" href="#" data-start="${cue.startTime}">${cue.text}</a></li>`;
     }
     sec += `</ol></details></section>`;
-    let nav = vid.closest("section").querySelector("nav")
+    let nav = vid.closest("section").querySelector("nav");
+    nav.id = id + "_chapters";
     nav.innerHTML = sec;
 
     for (let a  of nav.querySelectorAll("a")){
