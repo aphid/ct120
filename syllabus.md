@@ -14,13 +14,17 @@ An up to date version of this syllabus can be found at: https://aphid.github.io/
 ## Instructor Information
 
 *   **Instructor:** 
-    *   **Name:** Abram Stern, Ph.D. (they/he) ETHAN IS TAKING OVER THE CLASS
+    *   **Name:** Abram Stern, Ph.D. (they/he)
     *   **Email:** [aphid@ucsc.edu](mailto:aphid@ucsc.edu)
     *   **Office Hours:** Tues from 3:05-4:05 (and ad-hoc on Matrix)
 *   **Teaching Assistant:** 
     *   **Name:** Lilly Selzer (she/her)
     *   **Email:** [lselzer@ucsc.edu](mailto:lselzer@ucsc.edu)
     *   **Office Hours:** Wed from 2pm-4pm. (link [here]())
+*   **Nautilus Diplomat:**
+    *   **Name:** Ethan Remrick (he/him)
+    *   **Email:** TBA
+    *   **Office Hours:** TBA
 
 ## Quick Links
 
@@ -156,7 +160,7 @@ Unlike in CT 20, documentation isn't explicitly required as part of your turnins
 
 Documentation CAN stand in next to your code on a project you were unable to complete. To receive full credit in this situation, the documentation should communicate the intent of what you've been working on, what you suspect the problem is, and how you attempted to solve it (trial and error? online resources?). 
 
-Documentaiton can take the form of brief articulations of what you've been up to in the class. Document progress, difficulty, interest, confusion, accomplishments, and/or goals. **_Please_**: not all of the above week. These can be in the form of screenshares (video), screenshots (images), text (markdown), hypertext (html), pictures of handwriting, links to git commit messages, console.logs, voice messages. Also a good place to reflect on any readings. Try different modes throughout the quarter. 
+Documentation can take the form of brief articulations of what you've been up to in the class. Document progress, difficulty, interest, confusion, accomplishments, and/or goals. **_Please_**: not all of the above week. These can be in the form of screenshares (video), screenshots (images), text (markdown), hypertext (html), pictures of handwriting, links to git commit messages, console.logs, voice messages. Also a good place to reflect on any readings. Try different modes throughout the quarter. 
 
 ## Code Review
 
