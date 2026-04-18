@@ -32,7 +32,7 @@ function processChapters(vid, track) {
     console.log(trk);
     let id = vid.closest("section").id;
     let cues = trk.cues;
-    let sec = `<details id=${id}_chapters><summary>Chapters (${cues.length})</summary>
+    let sec = `<details open id=${id}_chapters><summary>Chapters (${cues.length})</summary>
         <ol>`;
     for (let cue of cues) {
         sec += `<li><a class="chapterlink" href="#" data-start="${cue.startTime}">${cue.text}</a></li>`;
