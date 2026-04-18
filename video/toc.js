@@ -13,7 +13,7 @@ for (let i = 0; i < tuts.length; i++) {
 
     } else {
 
-        let title = tut.querySelector("h3").textContent;
+        let title = tut.querySelector("h2").textContent;
         let id = tut.id;
         let vid = tut.querySelector("video");
         let link = `<a href="#${id}">${title}</a> <span class="duration"></span>`;
