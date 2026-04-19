@@ -7,13 +7,13 @@ for (let i = 0; i < tuts.length; i++) {
     let li = document.createElement("li");
 
     if (tut.classList.contains("group")) {
-        let id = tut.querySelector("h3").textContent;
+        let id = tut.querySelector("h1").textContent;
         li.innerHTML = `${id}<ol id=toc${tut.id}>`;
         list.appendChild(li);
 
     } else {
 
-        let title = tut.querySelector("h1").textContent;
+        let title = tut.querySelector("h2").textContent;
         let id = tut.id;
         let vid = tut.querySelector("video");
         let link = `<a href="#${id}">${title}</a> <span class="duration"></span>`;
