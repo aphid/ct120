@@ -1,0 +1,50 @@
+# Cool Tools
+
+## audio/video
+
+* [Strudel](https://strudel.cc) - procedurally generated music (based on tidal)
+* [Supercollider](https://supercollider.github.io/) - a platform for audio synthesis.
+* [ORCA](https://github.com/hundredrabbits/)orcaAn esoteric language for making live music.
+* [Pure Data (pD)](https://puredata.info/) an open source visual programming language for multimedia (often used for sound synthesis). An open source older relative to (proprietary software [Max](https://cycling74.com/products/max))
+* [howlerjs](https://howlerjs.com/) general purpose audio js library (abstracts html5 audio)
+* [HTML Web speech](https://developer.mozilla.org/en-US/docs/Web/API/Web_Speech_API/Using_the_Web_Speech_API)
+* [videogrep](https://github.com/antiboredom/videogrep) python based forced text extraction from a/v material. (see: https://lav.io/notes/videogrep-tutorial)
+* [ableplayer](https://ableplayer.github.io/ableplayer)- an accessibility-forward media player for HTML5 audio or video
+
+## livecoding
+
+* [hydra](https://hydra.ojack.xyz) 
+* [gibber](https://gibber.cc/)
+* [estuary](https://estuary.mcmaster.ca/) - collaborative a/v coding
+
+
+## 2d, vector
+
+* [Anime.js](https://animejs.com/) lightweight/performant animation library
+
+* [Paperjs](http://paperjs.org/) open source vector graphics library built on top of canvas.
+* [d3](https://d3js.org/) - data visualization
+
+
+## 3d/game engines
+
+* [godot](https://godotengine.org/) - a full fledged open source gaming engine
+* [Threejs](https://threejs.org/) a general-purpose 3d library for JavaScript that uses the HTML canvas.
+* [Babylon.js](https://www.babylonjs.com/) a powerful, open, and simple 3d engine for browsers. Newer than three.js and perhaps leaner (older projects have bigger communities but more "legacy" code to maintain)
+
+## text/hypertext/hypermedia
+
+* [Twine](https://twinery.org/) a framework for making interactive hypertext nonlinear fiction (or nonfiction)
+* [Tracery](https://tracery.io/) a tool for making dynamically generated text (for bots, among other things - [like for mastodon](https://cheapbotstootsweet.com/) or [bsky](https://bluebotsdonequick.com/))
+* [RevealJS](https://revealjs.com/) an HTML/md slideshow library, but could be (mis?)used for shell games, hypertext (non-)fiction
+* [HyperCard](https://hypercard.org/) - a pre-web mac app/tool for hypermedia, many open source remakes/emulators abound
+
+## p5js
+
+* [p5js community libraries](https://archive.p5js.org/libraries/)
+
+## APIs
+
+* [browser/web apis](https://developer.mozilla.org/en-US/docs/Web/API)
+* [python scripting inside krita](https://docs.krita.org/en/user_manual/python_scripting/introduction_to_python_scripting.html - krita is an open source drawing program; there's a python interface)
+* \[...\]
