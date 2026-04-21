@@ -1,6 +1,6 @@
 # PROJECT DESCRIPTION
 
-(Try to ) make something using a library, tool, or application you'd never used before **this quarter** (this allows twine/three). Your work should primarily code-based (this is a creative coding class, after all). You have a many options. Follow your interests and take this as an opportunity to experiment, maybe you'll decide use this tool for future off-ramp projects (or something that you make that goes beyond this course.
+(Try to ) make something using a library, tool, or application you'd never used before **this quarter** (this allows twine/threejs, etc.). Your work should primarily code-based (this is a creative coding class, after all). You have a many options. Follow your interests and take this as an opportunity to experiment, maybe you'll decide use this tool for future off-ramp projects (or something that you make that goes beyond this course.
 
 You can use a javascript library designed to facilitate media-based work (like for audio or vector art or 3d). This includes p5js libraries (https://p5js.org/libraries/directory Links to an external site.) and HTML5 APIs  that you haven't used (like accessing the camera or microphone, web audio, web bluetooth, web speech, media devices, idle detection... the list goes on and on Links to an external site.).
 
