@@ -1,4 +1,4 @@
-# PROJECT DESCRIPTION
+# cool tools
 
 (Try to ) make something using a library, tool, or application you'd never used before **this quarter** (this allows twine/threejs, etc.). Your work should primarily code-based (this is a creative coding class, after all). You have a many options. Follow your interests and take this as an opportunity to experiment, maybe you'll decide use this tool for future off-ramp projects (or something that you make that goes beyond this course.
 
