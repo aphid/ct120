@@ -47,13 +47,13 @@
 ## APIs
 
 * [browser/web apis](https://developer.mozilla.org/en-US/docs/Web/API)
-* [python scripting inside krita](https://docs.krita.org/en/user_manual/python_scripting/introduction_to_python_scripting.html - krita is an open source drawing program; there's a python interface)
+* [python scripting inside krita](https://docs.krita.org/en/user_manual/python_scripting/introduction_to_python_scripting.html) - krita is an open source drawing program; there's a python interface)
 * \[...\]
 
 ## emulation/nostalgia
 
-* [jpexs](https://github.com/jindrapetrik/jpexs-decompiler)
+* [jpexs](https://github.com/jindrapetrik/jpexs-decompiler)  JPEXS Free Flash Decompiler 
 * [HyperCard](https://hypercard.org/) - a pre-web mac app/tool for hypermedia, many open source remakes/emulators abound
 * [basiliskii](https://www.emaculation.com/doku.php/sheepshaver_basiliskii_linux?__cf_ch)   old mac emulator (early 90s)
 * [sheepshaver](https://www.emaculation.com/doku.php/sheepshaver_basiliskii_linux?__cf_ch)  old mac emulator (late 90s)
-* 
+* \[...\]
