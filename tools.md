@@ -8,9 +8,20 @@ some of these projects have been around a long time, so documentation you find m
 
 ## audio/video
 
-* [Strudel](https://strudel.cc) - procedurally generated music (based on tidal)
+* [Strudel](https://strudel.cc) - procedurally generated music (based on [tidal cycles](https://tidalcycles.org/))
+    * **Dependencies** - modern browser
+    * **Installation** 
+        * [Incorporating into a project](https://strudel.cc/technical-manual/project-start/)
+        * embeddable from their website with or without UI
+        * can be downloaded/run locally (or on your own server) using npm
+    * **Community/Support**
+        * Github, mastodon, discord
 * [Supercollider](https://supercollider.github.io/) - a platform for audio synthesis.
-* [ORCA](https://github.com/hundredrabbits/)orcaAn esoteric language for making live music.
+    * **Dependencies** desktop app (windows, macos, linux)
+    * **Installation**
+        * 3 parts (engine/server, language/client, edtior), all one download.
+    * [**Community/Support**](https://supercollider.github.io/community)
+* [ORCA](https://github.com/hundredrabbits/) An esoteric language for making live music.
 * [Pure Data (pD)](https://puredata.info/) an open source visual programming language for multimedia (often used for sound synthesis). An open source older relative to (proprietary software [Max](https://cycling74.com/products/max))
 * [howlerjs](https://howlerjs.com/) general purpose audio js library (abstracts html5 audio)
 * [HTML Web speech](https://developer.mozilla.org/en-US/docs/Web/API/Web_Speech_API/Using_the_Web_Speech_API)
