@@ -1,5 +1,11 @@
 # Cool Tools
 
+Please add things to this list (or post them in the chat, &amp; I'll add them). 
+
+## things to consider
+
+some of these projects have been around a long time, so documentation you find might not be up to date. some may have requirements that are difficult to satisfy (e.g., videogrep &amp; a particular version of python). 
+
 ## audio/video
 
 * [Strudel](https://strudel.cc) - procedurally generated music (based on tidal)
