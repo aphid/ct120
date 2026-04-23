@@ -1,5 +1,9 @@
+
+let canv = document.querySelector("#target");
+
+
 function setup(){
-    createCanvas(400,400);
+    createCanvas(400,400, canv);
 
 }
 
