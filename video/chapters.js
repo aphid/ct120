@@ -40,8 +40,10 @@ function processChapters(vid, track) {
     sec += `</ol></details></section>`;
     let nav = vid.closest("section").querySelector("nav");
     if (!nav){
-        nav = vid.after(document.createElement("nav"));
+        nav = document.createElement("nav");
+        vid.after(nav);
     }
+    console.log(nav);
     nav.id = id + "_chapters";
     nav.innerHTML = sec;
 
