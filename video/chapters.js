@@ -39,6 +39,9 @@ function processChapters(vid, track) {
     }
     sec += `</ol></details></section>`;
     let nav = vid.closest("section").querySelector("nav");
+    if (!nav){
+        nav = vid.after(document.createElement("nav"));
+    }
     nav.id = id + "_chapters";
     nav.innerHTML = sec;
 

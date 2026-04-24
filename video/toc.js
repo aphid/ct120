@@ -1,14 +1,20 @@
 let toc = document.querySelector("#toc");
-let list = toc.querySelector("ol");
+let list;
 let groups = document.querySelectorAll(".group");
 let tuts = document.querySelectorAll("section");
 for (let i = 0; i < tuts.length; i++) {
+    list = toc.querySelector("#oltoc");
     let tut = tuts[i];
     let li = document.createElement("li");
-
+    if (!tut.classList.contains("group") && !tut.classList.contains("tutorial")){
+        console.log("wrong kind of section", tut);
+        continue;
+    }
+    //top level
     if (tut.classList.contains("group")) {
         let id = tut.querySelector("h1").textContent;
-        li.innerHTML = `${id}<ol id=toc${tut.id}>`;
+        console.log("main group", id);
+        li.innerHTML = `${id}<ol id="toc${tut.id}"></ol>`;
         list.appendChild(li);
 
     } else {
@@ -20,7 +26,7 @@ for (let i = 0; i < tuts.length; i++) {
 
         li.innerHTML = link;
 
-        if (tut.closest(".group")){
+        if (tut.closest(".group")) {
             let g = tut.closest(".group");
             list = document.querySelector(`ol#toc${g.id}`)
 
