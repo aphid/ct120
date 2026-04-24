@@ -19,7 +19,7 @@ if you find resources (documentation, tutorials, community boards) for a project
     * **Tutorial**
         * [strudel basics](https://strudel.patternclub.org/workshop/strudel-basics/)
     * **Community/Support**
-        * <s>Github</s> codeberg, mastodon, discord, subreddit
+        * ~~Github~~codeberg, mastodon, discord, subreddit
 * [Supercollider](https://supercollider.github.io/) - a platform for audio synthesis.
     * **Dependencies** desktop app (windows, macos, linux)
     * **Installation**
