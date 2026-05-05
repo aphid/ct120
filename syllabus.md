@@ -20,7 +20,7 @@ An up to date version of this syllabus can be found at: https://aphid.github.io/
 *   **Teaching Assistant:** 
     *   **Name:** Lilly Selzer (she/her)
     *   **Email:** [lselzer@ucsc.edu](mailto:lselzer@ucsc.edu)
-    *   **Office Hours:** Wed from 2pm-4pm. (link [here]())
+    *   **Office Hours:** Wed from 2pm-4pm. (link [https://ucsc.zoom.us/j/93081535326?pwd=2lxSAfxb0bvIgpICNC5hJj7y9YF9U9.1]())
 *   **Nautilus Diplomat:**
     *   **Name:** Ethan Remick (he/him)
     *   **Email:** TBA
