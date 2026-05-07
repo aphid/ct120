@@ -6,20 +6,43 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>audio features</title>
 </head>
-<script type="text/javascript" src="https://unpkg.com/meyda@<VERSION>/dist/web/meyda.min.js"></script>
+<script type="text/javascript" src="https://unpkg.com/meyda@5.6.3/dist/web/meyda.min.js"></script>
 
 <body>
-
+    <audio id="theaud" muted controls></audio>
 </body>
 
 <script>
 
     async function getAudio() {
         if (navigator.mediaDevices) {
+            const audioContext = new AudioContext();
             console.log("getUserMedia supported.");
-            await navigator.mediaDevices.getUserMedia({ audio: true, video: false });
+            let stream = await navigator.mediaDevices.getUserMedia({ audio: true, video: false });
+            theaud.srcObject = stream;
+            const source = audioContext.createMediaElementSource(theaud);
+            source.connect(audioContext.destination);
+
+            if (typeof Meyda === "undefined") {
+                console.log("Meyda could not be found! Have you included it?");
+            } else {
+                const analyzer = Meyda.createMeydaAnalyzer({
+                    audioContext: audioContext,
+                    source: source,
+                    bufferSize: 512,
+                    featureExtractors: ["chroma"],
+                    callback: (features) => {
+                        console.log(features);
+                    },
+                });
+                analyzer.start();
+            }
+
+
         }
     }
+
+
 
 
 
