@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>prototypes and pawsitioning</title>
+    <style>
+        body {
+            background: url("../night_sky.gif");
+            width: 100vw;
+            height: 100vh;
+            overflow: hidden;
+        }
+
+        .dog {
+            position: absolute;
+            transition: all 5s ease-in-out;
+        }
+    </style>
+</head>
+
+<body>
+
+</body>
+
+<script>
+    let dogs = [];
+
+    while (!enoughDog()) {
+        dogs.push(needsMoreDog());
+    }
+
+    function enoughDog() {
+        let dogCount = dogs.length
+        if (dogCount < 50) {
+            return false;
+        }
+        //this is an important pattern!
+        return true;
+    }
+
+    function needsMoreDog() {
+        let maxW = window.innerWidth;
+        let maxH = window.innerHeight;
+
+        let img = document.createElement("img");
+        img.src = "rosie_a.png";
+        img.alt = "a very cute black and white dog with their mouth open";
+        img.style.position = "absolute";
+        let x = random(0, maxW);
+        let y = random(0, maxH);
+        x = -x;
+        y = -y;
+        let rot = random(-90, 90);
+        let w = random(20, 450);
+        img.style.left = x + "px";
+        img.style.top = y + "px";
+        img.classList.add("dog");
+        img.style.rotate = rot + "deg";
+        img.width = 0;
+        img.style.zIndex = 1000 - parseInt(img.width);
+        document.body.appendChild(img);
+
+        let dog = new Dog(img, x, y, w, rot)
+
+        return dog;
+    }
+
+    function Dog(ele, x, y, w, rot) {
+        this.ele = ele;
+        console.log(x);
+        //if coordinates provided, great
+        if (x && y && w && rot) {
+            this.x = x;
+            this.y = y;
+            this.w = w;
+            this.r = rot;
+        } else {
+            //otherwise, find them in the styling.
+            //parse strips the "px" from the css style;
+            this.x = parseFloat(ele.style.left);
+            this.y = parseFloat(ele.style.top);
+            this.w = parseFloat(ele.width);
+            this.r = parseFloat(ele.style.rotate);
+        }
+        console.log(this);
+        let dog = this;
+        //make sure dogs' positions are visible;
+        window.setTimeout(function () {
+            dog.pawsition({ x: Math.abs(parseFloat(dog.x)), y: Math.abs(parseFloat(dog.y)) });
+            dog.ele.width = dog.w;
+        }, random(500, 15000));
+        console.log(this.ele.style.top);
+    }
+
+    Dog.prototype.pawsition = function (coords) {
+        if (!coords) {
+            return { x: this.x, y: this.y }
+        } else if (coords.x && coords.y) {
+            this.ele.style.left = parseFloat(coords.x) + "px";
+            this.ele.style.top = parseFloat(coords.y) + "px";
+            if (!coords.r) {
+                coords.r = parseInt(this.r) + "deg";
+            }
+            if (!coords.w) {
+                coords.w = this.w
+            }
+            this.ele.style.rotate = coords.r;
+            this.ele.width = coords.w;
+        } else {
+            throw (coords, "coordinates should be an object with x and y properties");
+        }
+    }
+
+
+
+    function random(min, max) {
+        return Math.floor(Math.random() * (max - min + 1)) + min;
+    }
+
+    Dog.prototype.rollOver = function(){
+        this.ele.style.rotate = parseInt(this.ele.style.rotate) + 720 + "deg"; 
+    }
+</script>
+
+</html>

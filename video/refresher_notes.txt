@@ -1,0 +1,160 @@
+Refresher series:
+* types -- typeof.
+
+booleans.  true, false.  you won't type these out very often, but you use them because other things evaluate to them, get cast to them... all the time
+like in conditionals
+
+Boolean() 
+FALSY THINGS: false, undefined, 0, -0, [], {}, (), null, NaN, 
+
+some other special cases.  everything else is true, even "false"!
+
+
+
+numbers
+
+floats and integers
+
+operators, order of operations.  parseInt, parseFloat, Number
+
+
+strings
+
+    concatenation
+    quote types.
+    replace/replaceAll
+    length
+    arraylike
+
+arrays -- lists of things
+
+    common methods and properties.  length, push, pop, slice, includes, indexOf.
+
+objects -- key/value pairs
+    accessing properties dot and [].  why either.
+    some common patterns. -- objects in arrays, all of the types. mention prototype pattern briefly.  
+
+working across types.  concatenation and addition. 
+
+strings and arrays, join and split.
+
+
+arraylike behavior
+
+common methods
+
+------------------------------------------------------------------------------------
+conditionals
+
+if ()
+
+    else
+
+    else if
+
+
+
+loops
+
+for /// 
+    let i=;
+
+    for...of
+
+    for...in // be careful with this one, i'll discuss it in function! (link to that chapter)
+
+    break
+    continue
+
+while
+
+
+if 
+
+--------------------------------------------------------------------
+
+functions .....
+
+functions have a name and any number of arguments including zero. arguments can have defaults.
+
+functions can "do things" and/or return things.
+
+functions can be named and used at will ...
+
+or you can just plop them wherever, in the argument of another function, or just out on its own:
+
+(function(){
+    return "shoe,shoe,shoe,shoe,shoe";
+})().split(",");
+
+functions also obey scope, they can be part of other functions ... or they can be "methods" of objects.
+
+let dog = {
+    "name": "Rosie",
+    "age": "3",
+    "weight": "53lb"
+}
+
+let Dog = function(name, age, weight){
+    this.name = name;
+    this.age = age;
+    this.weight = weight;
+}
+
+Dog.prototype.backflip = function(){
+    
+    //make div and attach to dom
+    let dogdiv = document.createElement("div");
+    h.textContent = this.name;
+    h.style.rotate = "0";
+    h.style.marginTop = "0";
+    h.style.marginLeft = "300px";
+    h.style.display = "inline-block";
+    h.style.transition = "all 7s ease-in-out";
+    h.style.padding = "30px";
+    document.body.appendChild(h);
+
+    //make img and attach to div
+    let i = document.createElement("img");
+    img.width = "200";
+    div.appendChild(img);
+
+    //scroll into view
+    img.scrollIntoView();
+
+    //backflip!
+    window.setTimeout(function(){
+    h.style.marginTop = "0"
+    },3500)
+    h.style.marginTop = "-300px";
+    h.style.marginLeft = "0";
+    h.style.rotate = "-360deg";
+}
+
+let rosie = new Dog("Rosie", 3, "53lb");
+
+rosie.name();
+rosie.name("roro");
+rosie.name();
+
+
+for (let property in rosie){
+   if (typeof rosie[property] !== "function"){
+       console.log(property, typeof rosie[property])
+   }
+}
+
+--------------------------------------------------------------------
+
+
+working with the document
+
+selecting elements 
+
+document.getElementById() // used to be so useful. but you can actually access any element with an id set with that id already:
+//<div id="omghi">hello!</div>
+
+console.log(omghi.textContent); //"hello!"
+
+document.querySelector("div") //returns first div in page; inputs css-like selector
+document.querySelectorAll("div")  //returns ALL DIVS in DOM at that time. not in an array.. in an iteratable NodeList (what?)
