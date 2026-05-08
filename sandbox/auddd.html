@@ -22,7 +22,7 @@
             let stream = await navigator.mediaDevices.getUserMedia({ audio: true, video: false });
             the_aud.srcObject = stream;
             const source = audioContext.createMediaElementSource(the_aud);
-            source.connect(audioContext.destination);
+            //source.connect(audioContext.destination);
 
             if (typeof Meyda === "undefined") {
                 console.log("Meyda could not be found! Have you included it?");
