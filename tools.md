@@ -11,7 +11,7 @@ if you find resources (documentation, tutorials, community boards) for a project
 ## audio/video
 
 * [Strudel](https://strudel.cc) - procedurally generated music (based on [tidal cycles](https://tidalcycles.org/))
-    * **Dependencies** - modern browser
+    * **Dependencies** - modern browser, musical knowledge helps
     * **Installation** 
         * [Incorporating into a project](https://strudel.cc/technical-manual/project-start/)
         * embeddable from their website with or without UI
