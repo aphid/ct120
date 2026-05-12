@@ -41,7 +41,7 @@ if you find resources (documentation, tutorials, community boards) for a project
 
 ## 2d, vector
 
-* [Anime.js](https://animejs.com/) lightweight/performant animation library
+* [Anime.js](https://animejs.com/) lightweight/performant animation library (warning, confusing to install)
 
 * [Paperjs](http://paperjs.org/) open source vector graphics library built on top of canvas.
 * [d3](https://d3js.org/) - data visualization
