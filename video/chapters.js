@@ -14,10 +14,6 @@ for (let t of tracks) {
         console.log("track", t.src, "has loaded");
         processChapters(vid,t);
     }
-    
-
-
-
 }
 
 function processChapters(vid, track) {
@@ -48,7 +44,7 @@ function processChapters(vid, track) {
 
     for (let a  of nav.querySelectorAll("a")){
         a.addEventListener("click",function(event){
-            vid.currentTime = this.dataset.start;
+            vid.currentTime = a.dataset.start;
             vid.play();
             event.preventDefault()
         })

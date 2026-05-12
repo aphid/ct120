@@ -1,16 +1,21 @@
+//set up some vars
 let toc = document.querySelector("#toc");
 let list;
 let groups = document.querySelectorAll(".group");
 let tuts = document.querySelectorAll("section");
+
+//for every section...
 for (let i = 0; i < tuts.length; i++) {
     list = toc.querySelector("#oltoc");
     let tut = tuts[i];
+    //make a list item
     let li = document.createElement("li");
+    //if it isn't a group or a tutorial, gtfo
     if (!tut.classList.contains("group") && !tut.classList.contains("tutorial")) {
         console.log("wrong kind of section", tut);
         continue;
     }
-    //top level
+    //top level - it's a group....
     if (tut.classList.contains("group")) {
         let id = tut.querySelector("h1").textContent;
         console.log("main group", id);
@@ -18,7 +23,7 @@ for (let i = 0; i < tuts.length; i++) {
         list.appendChild(li);
 
     } else {
-
+        //it's a tutorial!
         let title = tut.querySelector("h2").textContent;
         let id = tut.id;
         let vid = tut.querySelector("video");
@@ -32,7 +37,7 @@ for (let i = 0; i < tuts.length; i++) {
         }
         list.appendChild(li);
 
-        //    console.log(vid);
+        //if video hasn't loaded already, add a listener...
         if (vid.readyState < 2) {
             vid.addEventListener("loadedmetadata", () => {
                 showDuration(vid, li);
