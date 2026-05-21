@@ -59,6 +59,11 @@ function showDuration(vid, li) {
     durspan.dataset.dur = dur;
     durspan.textContent = duration;
     durspan.style.opacity = 1;
+    let total = 0;
+    for (let d of document.querySelectorAll(".duration")){
+        total+= d.dataset.dur;
+    }
+    totaltime.textContent = `Total Time: ${formatDuration(total)}`;
 }
 
 function formatDuration(seconds) {
