@@ -38,7 +38,7 @@ for (let i = 0; i < tuts.length; i++) {
         list.appendChild(li);
 
         //if video hasn't loaded already, add a listener...
-        if (vid.readyState < 2) {
+        if (vid && vid.readyState < 2) {
             vid.addEventListener("loadedmetadata", () => {
                 showDuration(vid, li);
             }, once = true);

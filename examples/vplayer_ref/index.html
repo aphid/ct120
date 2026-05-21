@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>p l a y ( o r _ p a u s e )</title>
+    <style>
+        * {
+            box-sizing: border-box;
+        }
+
+        body {
+            margin: 0;
+            background: radial-gradient(circle, rgba(63, 94, 251, 1) 0%, rgba(252, 70, 107, 1) 100%);
+            animation-name: rotateTheHue;
+            animation-duration: 23s;
+            animation-iteration-count: infinite;
+            min-height: 100vh;
+            max-height: 100vh;
+            overflow: hidden;
+            padding: 0.5px;
+
+        }
+
+        .pointer{
+            cursor: pointer;
+        }
+
+        #container {
+            position: absolute;
+            top: 8vh;
+            left: 8vw;
+            right: 8vw;
+            bottom: 8vh;
+            padding: 1px;
+        }
+
+        video {
+            position: relative;
+            height: 100%;
+            left: 50%;
+            transform: translateX(-50%);
+            filter: none;
+            box-shadow: 5px 5px 25px grey;
+        }
+
+        @keyframes rotateTheHue {
+            from {
+                backdrop-filter: hue-rotate(0deg) saturation(100%);
+            }
+
+            to {
+                backdrop-filter: hue-rotate(360deg) saturation(300%);
+            }
+        }
+
+        .button {
+            position: absolute;
+            left: -500px;
+            /* offscreen until positioned */
+            top: -100px;
+            width: 50px;
+        }
+
+        #progress {
+            cursor: crosshair;
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            width: 100vw;
+            height: 4vh;  
+            background: radial-gradient(circle, rgba(63, 94, 251, 1) 0%, rgba(252, 70, 107, 1) 100%);
+        }
+
+        #progbar {
+            position: relative;
+            bottom: 0;
+            left: 0;
+            height: 100%;
+            width: 0%;
+            background: rgba(0, 0, 0, 0.1);
+            filter: hue-rotate(180deg) blur(1px);
+            border-right: 1px solid papayawhip;
+        }
+    </style>
+    <script src="vplayer.js" defer></script>
+</head>
+
+<body>
+    <div id="container">
+        <video class="pointer" src="">
+        </video>
+    </div>
+    <div class="button" id="testBut">placeholder</div>
+    <nav id="progress">
+        <div id="progbar"></div>
+    </nav>
+</body>
+
+</html>
