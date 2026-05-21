@@ -20,7 +20,9 @@
             cursor: pointer;
         }
 
-        li { font-size: 1.1em;}
+        li {
+            font-size: 1.1em;
+        }
 
         details ul,
         details .transcript {
@@ -92,7 +94,9 @@
             background: rgba(199, 199, 199, 0.3)
         }
 
-        p { font-size: 1rem;}
+        p {
+            font-size: 1rem;
+        }
 
         h3 {
             font-size: .8em;
@@ -104,11 +108,20 @@
 
             /* Changes nested to a, b, c */
         }
+
+        #back2top {
+            position: fixed;
+            bottom: 0;
+            right: 15px;
+            font-size: 4em;
+            color: blue;
+            
     </style>
 
 </head>
 
 <body>
+
     <header>
         <h1>ct 120 video walkthroughs/tutorials/rambles</h1>
         <ul class="horiz">
@@ -126,6 +139,7 @@
 
             <p>raw video & transcripts can be found <a href="https://aphid.org/ct120/video/">in this directory</a>.</p>
         </div>
+        <div id="back2top">☝</div>
     </header>
 
 
@@ -135,7 +149,7 @@
         <section class="tutorial" id="git">
             <h2>git</h2>
             <h3>🎵 Git up on this 🎵</h3>
-            <video  preload="metadata" controls crossorigin="anonymous" src="https://aphid.org/ct120/video/git.mp4">
+            <video preload="metadata" controls crossorigin="anonymous" src="https://aphid.org/ct120/video/git.mp4">
                 <track crossorigin="anonymous" kind="captions" src="https://aphid.org/ct120/video/git.en.vtt"
                     srclang="en" default>
                 <track crossorigin="anonymous" kind="chapters" src="https://aphid.org/ct120/video/git.chapters.vtt"
@@ -156,7 +170,7 @@
         <section class="tutorial" id="types">
             <h2>types </h2>
             <h3>booleans, numbers, strings, objects, arrays, and other types</h3>
-            <video  preload="metadata" controls crossorigin="anonymous" src="https://aphid.org/ct120/video/types.mp4">
+            <video preload="metadata" controls crossorigin="anonymous" src="https://aphid.org/ct120/video/types.mp4">
                 <track crossorigin="anonymous" kind="captions" src="https://aphid.org/ct120/video/types.en.vtt"
                     srclang="en" default>
                 <track crossorigin="anonymous" kind="chapters" src="https://aphid.org/ct120/video/types.chapters.vtt"
@@ -176,7 +190,7 @@
 
         <section class="tutorial" id="condition">
             <h2>if/for/while: conditionals, logics, needsMoreDog()</h2>
-            <video  preload="metadata" controls crossorigin="anonymous"
+            <video preload="metadata" controls crossorigin="anonymous"
                 src="https://aphid.org/ct120/video/conditionals.mp4">
                 <track crossorigin="anonymous" kind="captions" src="https://aphid.org/ct120/video/conditionals.en.vtt"
                     srclang="en" default>
@@ -203,7 +217,7 @@
         <section class="tutorial" id="selectors">
             <h2>selectors, timed elements </h2>
             <h3>ids, classes, timeouts, and static</h3>
-            <video  preload="metadata" controls crossorigin="anonymous"
+            <video preload="metadata" controls crossorigin="anonymous"
                 src="https://aphid.org/ct120/video/selectors.mp4">
                 <track crossorigin="anonymous" kind="captions" src="https://aphid.org/ct120/video/selectors.en.vtt"
                     srclang="en" default>
@@ -235,7 +249,7 @@
         <section class="tutorial" id="function">
             <h2>functions(!)</h2>
             <h3>returning, promises, prototypes, rollovers</h3>
-            <video  preload="metadata" controls crossorigin="anonymous" src="https://aphid.org/ct120/video/function.mp4">
+            <video preload="metadata" controls crossorigin="anonymous" src="https://aphid.org/ct120/video/function.mp4">
                 <track crossorigin="anonymous" kind="captions" src="https://aphid.org/ct120/video/function.en.vtt"
                     srclang="en" default>
                 <track crossorigin="anonymous" kind="chapters" src="https://aphid.org/ct120/video/function.chapters.vtt"
@@ -264,31 +278,33 @@
     </section>
 
     <section id="vidvidvid" class="group">
-                <h1>🐌❓❓❓🐌 vidvidvid 🐌❓❓❓🐌</h1>
+        <h1>🐌❓❓❓🐌 vidvidvid 🐌❓❓❓🐌</h1>
 
         <section class="tutorial" id="vidvidvid1">
             <h2>part one</h2>
-            <video  preload="metadata" controls crossorigin="anonymous" src="https://aphid.org/ct120/video/vidvidvid_1.mp4">
+            <video preload="metadata" controls crossorigin="anonymous"
+                src="https://aphid.org/ct120/video/vidvidvid_1.mp4">
                 <track crossorigin="anonymous" kind="captions" src="https://aphid.org/ct120/video/vidvidvid_1.en.vtt"
                     srclang="en" default>
-                <!--<track crossorigin="anonymous" kind="chapters" src="https://aphid.org/ct120/video/vidvidvid_1.chapters.vtt"
-                    srclang="en" default> -->
+                <track crossorigin="anonymous" kind="chapters" src="https://aphid.org/ct120/video/vidvidvid_1.chapters.vtt"
+                    srclang="en" default>
             </video>
         </section>
 
-            <section class="tutorial" id="vidvidvid2">
-                <h2>part two</h2>
-            <video  preload="metadata" controls crossorigin="anonymous" src="https://aphid.org/ct120/video/vidvidvid_2.mp4">
+        <section class="tutorial" id="vidvidvid2">
+            <h2>part two</h2>
+            <video preload="metadata" controls crossorigin="anonymous"
+                src="https://aphid.org/ct120/video/vidvidvid_2.mp4">
                 <track crossorigin="anonymous" kind="captions" src="https://aphid.org/ct120/video/vidvidvid_2.en.vtt"
                     srclang="en" default>
-             <!--   <track crossorigin="anonymous" kind="chapters" src="https://aphid.org/ct120/video/vidvidvid_2.chapters.vtt"
+                <!--   <track crossorigin="anonymous" kind="chapters" src="https://aphid.org/ct120/video/vidvidvid_2.chapters.vtt"
                     srclang="en" default>-->
             </video>
         </section>
 
 
-            
-        </section>
+
+    </section>
     </section>
 
     <section id="cool_tools" class="group">
@@ -297,7 +313,7 @@
         <section class="tutorial" id="scriptz">
             <h2>📜 scripts 📜</h2>
             <h3>edge cases, async, defer, strudels, and other web pastries</h3>
-            <video  preload="metadata" controls crossorigin="anonymous" src="https://aphid.org/ct120/video/scriptz.mp4">
+            <video preload="metadata" controls crossorigin="anonymous" src="https://aphid.org/ct120/video/scriptz.mp4">
                 <track crossorigin="anonymous" kind="captions" src="https://aphid.org/ct120/video/scriptz.en.vtt"
                     srclang="en" default>
                 <track crossorigin="anonymous" kind="chapters" src="https://aphid.org/ct120/video/scriptz.chapters.vtt"
@@ -322,7 +338,7 @@
         <section class="tutorial" id="chessboard">
             <h2>🏁 chessboard 🏁 (console & audio edition)</h2>
             <h3>working through the chessboard exercise</h3>
-            <video  preload="metadata" controls crossorigin="anonymous"
+            <video preload="metadata" controls crossorigin="anonymous"
                 src="https://aphid.org/ct120/video/chessboard_.mp4">
                 <track crossorigin="anonymous" kind="captions" src="https://aphid.org/ct120/video/chessboard.en.vtt"
                     srclang="en" default>
@@ -358,7 +374,7 @@
         <section class="tutorial" id="chessboard2">
             <h2>🏁🌈 chessboard 🌈🏁 (pt2, p5js edition) </h2>
             <h3>2 p5 2 p5urious? 😬</h3>
-            <video  preload="metadata" controls crossorigin="anonymous"
+            <video preload="metadata" controls crossorigin="anonymous"
                 src="https://aphid.org/ct120/video/chessboard2.mp4">
                 <track crossorigin="anonymous" kind="captions" src="https://aphid.org/ct120/video/chessboard2.en.vtt"
                     srclang="en" default>
@@ -381,7 +397,7 @@
         <section class="tutorial" id="htmlboard">
             <h2>🏁⬜🟪⬛ htmlboard ⬛🟪⬜🏁 </h2>
             <h3>checkers? in my html!?</h3>
-            <video  preload="metadata" controls crossorigin="anonymous"
+            <video preload="metadata" controls crossorigin="anonymous"
                 src="https://aphid.org/ct120/video/htmlboard.mp4">
                 <track crossorigin="anonymous" kind="captions" src="https://aphid.org/ct120/video/htmlboard.en.vtt"
                     srclang="en" default>
@@ -408,7 +424,7 @@
         <section class="tutorial" id="threeboard">
             <h2>🧊🧊🧊 three board 🧊🧊🧊 </h2>
             <h3>(in 3d)</h3>
-            <video  preload="metadata" controls crossorigin="anonymous"
+            <video preload="metadata" controls crossorigin="anonymous"
                 src="https://aphid.org/ct120/video/threeboard.mp4">
                 <track crossorigin="anonymous" kind="captions" src="https://aphid.org/ct120/video/threeboard.en.vtt"
                     srclang="en" default>
@@ -434,7 +450,7 @@
         <h2>server side, the command line, and related topics</h2>
         <section class="tutorial" id="scraping1">
             <h2>our first scraper</h2>
-            <video  preload="metadata" controls crossorigin="anonymous" src="https://aphid.org/ct120/video/scraping.mp4">
+            <video preload="metadata" controls crossorigin="anonymous" src="https://aphid.org/ct120/video/scraping.mp4">
                 <track crossorigin="anonymous" kind="captions" src="https://aphid.org/ct120/video/scraping.en.vtt"
                     srclang="en" default>
                 <track crossorigin="anonymous" kind="chapters" src="https://aphid.org/ct120/video/scraping.chapters.vtt"
@@ -483,7 +499,7 @@
         <section class="tutorial" id="server">
             <h2>a server in the cloud(s) ☁️🌨️🖥️💭💨 </h2>
             <h3>(and its limits)</h3>
-            <video  preload="metadata" poster="SMC.jpg" controls crossorigin="anonymous"
+            <video preload="metadata" poster="SMC.jpg" controls crossorigin="anonymous"
                 src="https://aphid.org/ct120/video/server.mp4">
                 <track crossorigin="anonymous" kind="captions" src="https://aphid.org/ct120/video/server.en.vtt"
                     srclang="en" default>
@@ -512,7 +528,7 @@
         <section class="tutorial" id="pi">
             <h2>a (rasp)berry small server </h2>
             <h3>🍒🫐🍓 (emoji for almost every berry but)</h3>
-            <video  preload="metadata" controls poster="https://aphid.org/ct120/video/berry.jpg" crossorigin="anonymous"
+            <video preload="metadata" controls poster="https://aphid.org/ct120/video/berry.jpg" crossorigin="anonymous"
                 src="https://aphid.org/ct120/video/raspberry.mp4">
                 <track crossorigin="anonymous" kind="captions" src="https://aphid.org/ct120/video/raspberry.en.vtt"
                     srclang="en" default>
@@ -540,7 +556,7 @@
             <h2>(not published yet)</h2>
             <h2>🛜server🛜services🛜</h2>
             <h3>cool tools two, server side edition</h3>
-            <video  preload="metadata" controls crossorigin="anonymous"
+            <video preload="metadata" controls crossorigin="anonymous"
                 data-src="https://aphid.org/ct120/video/service.mp4">
                 <!--  <track crossorigin="anonymous" kind="captions" data-src="https://aphid.org/ct120/video/service.en.vtt"
                     srclang="en" default>
@@ -573,7 +589,7 @@
         <h2>code for the code</h2>
         <section class="tutorial" id="videopage">
             <h2>how i made this video page</h2>
-            <video  preload="metadata" controls crossorigin="anonymous"
+            <video preload="metadata" controls crossorigin="anonymous"
                 src="https://aphid.org/ct120/video/videopage.mp4">
                 <track crossorigin="anonymous" kind="captions" src="https://aphid.org/ct120/video/videopage.en.vtt"
                     srclang="en" default>
