@@ -140,7 +140,7 @@
 
             <p>raw video & transcripts can be found <a href="https://aphid.org/ct120/video/">in this directory</a>.</p>
         </div>
-        <div id="back2top"><a id="back2top" href="#top">☝</a></div>
+        <div id="back2top"><button id="back2top" href="#top">☝</a></div>
     </header>
 
 
@@ -609,6 +609,13 @@
                     for (let a of document.querySelectorAll('a')) {
                         a.target = "_blank";
                     }
+
+                    let topper = document.querySelector("#back2top");
+                    
+                    topper.addEventListener("click", function(){
+                        scrollTo(0,0,"smooth");
+                    });
+                    
                 </script>
 </body>
 
