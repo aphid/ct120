@@ -56,6 +56,7 @@ function showDuration(vid, li) {
         duration = "???";
     }
     let durspan = li.querySelector(".duration");
+    durspan.dataset.dur = dur;
     durspan.textContent = duration;
     durspan.style.opacity = 1;
 }
