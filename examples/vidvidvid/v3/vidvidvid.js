@@ -40,6 +40,22 @@ Player.prototype.load = async function () {
     this.checkBut();
 }
 
+Player.prototype.checkBut = async function () {
+    await sleep(250);
+    for (let i = 0; i < this.buttons.length; i++) {
+        let but = this.buttons[i];
+        let rect = but.getBoundingClientRect();
+
+        if (rect.top >= window.innerHeight) {
+            but.remove();
+            this.buttons.splice(i, 1);
+            break;
+        }
+    }
+    this.checkBut();
+    this.spawnButtons();
+}
+
 Player.prototype.spawnButtons = async function () {
 
     let currentButtons = this.buttons.length;
@@ -102,11 +118,9 @@ Player.prototype.rosie = function (but) {
     but.addEventListener("click", function () {
         let img = document.createElement("img");
         img.src = "https://aphid.github.io/ct120/examples/refresher/rosie_a.png";
-        img.classList.add("rosie");
         img.style.position = "absolute";
         img.width = window.innerWidth + 500;
         img.style.top = -400;
-
         img.style.left = -800;
         img.style.zIndex = 9000;
         document.body.appendChild(img);
@@ -151,7 +165,7 @@ Player.prototype.slowpoke = function (but) {
 }
 
 Player.prototype.spawnButton = async function () {
-    let playa = this;
+
     let type = this.butTypes[rando(0, this.butTypes.length - 1)];
     let but = document.createElement("button");
 
@@ -180,21 +194,7 @@ Player.prototype.spawnButton = async function () {
     but.style.left = rando(0, window.innerWidth) + "px";
     but.style.zIndex = rando(0, 100);
     document.body.append(but);
-    await sleep(rando(3, 5793));
-
-    but.addEventListener("transitionend", function () {
-        let rect = but.getBoundingClientRect();
-
-        if (rect.top >= window.innerHeight) {
-            playa.spawnButton();
-            but.remove();
-            this.buttons.splice(i, 1);
-        }
-
-
-    })
-
-
+    await sleep(3);
     but.style.top = window.innerHeight + "px";
     this.buttons.push(but);
 
