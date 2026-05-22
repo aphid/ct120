@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>p l a y ( o r _ p a u s e )</title>
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            background: radial-gradient(circle, rgba(63, 94, 251, 1) 0%, rgba(252, 70, 107, 1) 100%);
+            min-height: 100vh;
+            max-height: 100vh;
+            overflow: hidden;
+            animation-name: rotateTheHue;
+            animation-duration: 23s;
+            animation-iteration-count: infinite;
+        }
+
+        video {
+            position: relative;
+            height: 100%;
+            left: 50%;
+            transform: translateX(-50%);
+            z-index: 50;
+        }
+
+        #container {
+            position: absolute;
+            top: 8vh;
+            left: 8vw;
+            bottom: 8vh;
+            right: 8vw;
+            z-index: 50;
+        }
+
+        #progress {
+            position: absolute;
+            bottom: 0;
+            height: 4vh;
+            left: 0;
+            background: papayawhip;
+            width: 100vw;
+            cursor: crosshair;
+            background: radial-gradient(circle, rgba(63, 94, 251, 1) 0%, rgba(252, 70, 107, 1) 100%);
+        }
+
+        #progbar {
+            position: relative;
+            background: palevioletred;
+            height: 100%;
+            background: rgba(0, 0, 0, 0.1);
+            backdrop-filter: hue-rotate(180deg);
+            width: 0%;
+        }
+
+        @keyframes rotateTheHue {
+            from {
+                backdrop-filter: hue-rotate(0deg);
+            }
+
+            to {
+                backdrop-filter: hue-rotate(360deg);
+            }
+        }
+
+        button {
+            position: absolute;
+            left: -500px;
+            top: -100px;
+            background: transparent;
+            border: 0;
+            font-size: 4em;
+            z-index: 1000;
+            transition: top 8s ease-in;
+            cursor: pointer;
+        }
+
+        .rosie {
+              pointer-events: none; 
+        }
+
+
+    </style>
+
+    <script src="vidvidvid.js" defer>
+
+    </script>
+</head>
+
+<body>
+
+    <div id="container">
+        <video>
+        </video>
+    </div>
+
+    <nav id="progress">
+        <div id="progbar"></div>
+    </nav>
+
+</body>
+
+</html>
