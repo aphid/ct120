@@ -60,10 +60,14 @@ function showDuration(vid, li) {
     durspan.textContent = duration;
     durspan.style.opacity = 1;
     let total = 0;
-    for (let d of document.querySelectorAll(".duration")){
-        total+= d.dataset.dur;
+    for (let d of document.querySelectorAll(".duration")) {
+        if (!d.dataset.dur){
+            continue;
+        }
+        console.log(d.dataset.dur);
+        total += parseInt(d.dataset.dur);
     }
-    totaltime.textContent = `Total Time: ${formatDuration(total)}`;
+    totaltime.innerHTML = `Total Time: <span class="duration" style="opacity: 1">${formatDuration(total)}</span>`;
 }
 
 function formatDuration(seconds) {
