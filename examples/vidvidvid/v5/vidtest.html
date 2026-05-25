@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        /* Centers the container on the screen */
+        body {
+            margin: 0;
+            padding: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+            overflow: hidden;
+            background-color: #000;
+        }
+
+        /* Clamps perfectly to the video dimensions */
+        .container {
+            padding: 0;
+            margin: 0;
+            outline: 3px solid red;
+            background: lightpink;
+            display: grid;
+            max-width: 90vw;
+            max-height: 90vh;
+        }
+
+        /* Fills the container and maintains ratio */
+        video {
+            padding: 0;
+            margin: 0;
+            outline: 1px solid pink;
+            width: 100%;
+            max-width: 90vw;
+            max-height: 84vh;
+            height: 100%;
+            object-fit: contain;
+        }
+    </style>
+</head>
+
+<body>
+    <div class=".video-container">
+        <video src="https://aphid.org/ct120/video/vidvidvid_1.mp4"></video>
+    </div>
+</body>
+
+</html>
