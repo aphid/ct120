@@ -19,7 +19,7 @@ for (let i = 0; i < tuts.length; i++) {
     if (tut.classList.contains("group")) {
         let id = tut.querySelector("h1").textContent;
         console.log("main group", id);
-        li.innerHTML = `${id}<ol id="toc${tut.id}"></ol>`;
+        li.innerHTML = `<a href="#${tut.id}">${id}</a><ol id="toc${tut.id}"></ol>`;
         list.appendChild(li);
 
     } else {
