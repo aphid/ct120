@@ -27,19 +27,32 @@
 
         }
 
-        video {
+        .regVid {
             width: 100%;
             height: 100%;
             max-width: 84vw;
             max-height: 84vh;
+            display: block;
         }
 
-        #container {
+        .splitVid {
+            display: block;
+            object-fit: cover;
+            height: 100%;
+            position: relative;
+
+        }
+
+
+
+        .container {
             position: absolute;
             display: grid;
             max-width: 84vw;
             max-height: 84vh;
             z-index: 50;
+            transition: left 5s ease-in-out,
+                right 5s ease-in-out;
         }
 
         #progress {
@@ -81,15 +94,44 @@
             font-size: 4em;
             z-index: 1000;
             transition: top 8s ease-in,
-                filter 3s ease-in-out;
+                filter 3s ease-in-out,
+                opacity 0.5s ease-out;
             cursor: pointer;
             filter: blur(0px);
             text-shadow: 3px 3px 10px black;
+            pointer-events: auto;
+        }
+
+        .rainbow {
+            font-size: 4em;
+            ;
+        }
+
+        #full {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100vw;
+            height: 100vh;
+            transition: backdrop-filter 5s ease-out;
+            pointer-events: none;
+            z-index: 1000;
 
         }
 
+        .saturated {
+            backdrop-filter: saturate(3200%);
+        }
+
+        .rain {
+            opacity: 1;
+        }
+
         .rosie {
+            display: block;
+            position: absolute;
             pointer-events: none;
+            width: 30%;
         }
 
         #vidtitle {
@@ -126,19 +168,21 @@
     <audio id="barqs"
         src="https://archive.org/download/78_dogs-large-dog-small-dog-watch-dogs-barking-angry-dogs-dogs-barking-distant_gbia0409685b/DOGS%3B%20Large%20Dog%3B%20Small%20Dog%3B%20Watch%20Dogs-%20Barking%3B%20Angry%20Dogs%3B%20Dogs%20Barking%20%28Distant%29.mp3"></audio>
 
-    <div id="container">
+    <div class="container">
         <div id="vidtitle">
             <h3>The Brollys</h3>
             <p>Duration: 43m33s</p>
             <p>United Kingdom</p>
         </div>
-        <video>
+        <video class="regVid">
         </video>
     </div>
 
     <nav id="progress">
         <div id="progbar"></div>
     </nav>
+
+    <div id="full"></div>
 
 </body>
 
