@@ -8,33 +8,36 @@
     <script src="toc.js" defer></script>
     <script src="chapters.js" defer></script>
     <style>
-
         @property --gradient-hue {
-           syntax: '<angle>';
-           initial-value: 0deg;
-           inherits: false;
+            syntax: '<angle>';
+            initial-value: 0deg;
+            inherits: false;
         }
 
         @keyframes slowHueShift {
-           0% {
-             --gradient-hue: 0deg;
-           }
-           100% {
-             --gradient-hue: 360deg;
-           }
+            0% {
+                --gradient-hue: 0deg;
+            }
+
+            100% {
+                --gradient-hue: 360deg;
+            }
         }
 
         body {
             font-family: sans-serif;
             background: #DFC9DF;
-              background: radial-gradient(circle, 
-                  hsl(calc(300deg + var(--gradient-hue)), 25%, 83%) 0%,   /* Center pastel pink */
-                  hsl(calc(180deg + var(--gradient-hue)), 25%, 83%) 50%,  /* Middle pastel cyan */
-                  hsl(calc(300deg + var(--gradient-hue)), 19%, 76%) 100%  /* Outer darker pastel pink */
-              );
-	    margin: 0;
+            background: radial-gradient(circle,
+                    hsl(calc(300deg + var(--gradient-hue)), 25%, 83%) 0%,
+                    /* Center pastel pink */
+                    hsl(calc(180deg + var(--gradient-hue)), 25%, 83%) 50%,
+                    /* Middle pastel cyan */
+                    hsl(calc(300deg + var(--gradient-hue)), 19%, 76%) 100%
+                    /* Outer darker pastel pink */
+                );
+            margin: 0;
             padding: 14px;
-	    animation: slowHueShift 450s linear infinite;
+            animation: slowHueShift 450s linear infinite;
         }
 
         details {
@@ -411,8 +414,8 @@
                 src="https://aphid.org/ct120/video/the_end_really_final_1.mp4">
                 <track crossorigin="anonymous" kind="captions"
                     src="https://aphid.org/ct120/video/the_end_really_final_1.en.vtt" srclang="en" default>
-                <track crossorigin="anonymous" kind="chapters" src="https://aphid.org/ct120/video/the_end_really_final_1.chapters.vtt"
-                    srclang="en" default>
+                <track crossorigin="anonymous" kind="chapters"
+                    src="https://aphid.org/ct120/video/the_end_really_final_1.chapters.vtt" srclang="en" default>
             </video>
 
             <h3>notes/links/errata</h3>
@@ -673,61 +676,36 @@
 
         <section class="tutorial" id="odo">
             <h2>🔥🧊dynamic dns🦆, scraping ODO, hosting PDFs and metadata🔥🧊</h2>
-            <video preload="metadata" controls crossorigin="anonymous"
-                src="https://aphid.org/ct120/video/ODO.mp4">
+            <video preload="metadata" controls crossorigin="anonymous" src="https://aphid.org/ct120/video/ODO.mp4">
                 <track crossorigin="anonymous" kind="captions" src="https://aphid.org/ct120/video/ODO.en.vtt"
                     srclang="en" default>
-                 <track crossorigin="anonymous" kind="chapters"
-                    src="https://aphid.org/ct120/video/ODO.chapters.vtt" srclang="en" default>
+                <track crossorigin="anonymous" kind="chapters" src="https://aphid.org/ct120/video/ODO.chapters.vtt"
+                    srclang="en" default>
             </video>
             <p>this scraper was inspired by a CT student's work from the very first cohort of the program!</p>
-<h3>links/notes/errata</h3>
-                <ul>
-                    <li>you can run all of this stuff on your laptop, home computer, or a VPS and it will go *much* faster than on my pi zero 2w</li>
-                    <li><a href="https://github.com/aphid/ODOscraper">repo for the scraper</a></li>
-                    <li><a href="http://ceetee120.duckdns.org/ODO/">my slow server</a> (and yes I reset my token)</li>
-                    <li><a href="https://www.duckdns.org">duck dns</a>!</li>
-                    <li><a href="https://portforward.com/">port forwarding guide</a></li>
-                    <li><a href="https://github.com/fail2ban/fail2ban">fail2ban</a> (read docs, it doesn't run without some config)</li>
-                    <li><a href="https://www.ice.gov/foia/odo-facility-inspections">ODO Ice Facility Inspections</a></li>
-                    <li><a href="https://developer.mozilla.org/en-US/docs/Web/API/Document_Object_Model/Selection_and_traversal_on_the_DOM_tree">DOM selection and traversal tutorial</a> and <a href="https://developer.mozilla.org/en-US/docs/Web/CSS/Guides/Selectors">CSS selector</a> guide</a></li>
-                    <li><a href="https://www.npmjs.com/package/node-html-parser">node-html-parser</a></li>
-                    <li><a href="https://www.npmjs.com/package/exiftool-vendored">exiftool vendored</a></li>
-                    <li><a href="https://github.com/ocrmypdf/ocrmypdf">ocrmypdf</a></li>
-                    <li><img src="https://aphid.org/ct120/video/harumph.gif" height="200"></li>
-                </ul>
+            <h3>links/notes/errata</h3>
+            <ul>
+                <li>you can run all of this stuff on your laptop, home computer, or a VPS and it will go *much* faster
+                    than on my pi zero 2w</li>
+                <li><a href="https://github.com/aphid/ODOscraper">repo for the scraper</a></li>
+                <li><a href="http://ceetee120.duckdns.org/ODO/">my slow server</a> (and yes I reset my token)</li>
+                <li><a href="https://www.duckdns.org">duck dns</a>!</li>
+                <li><a href="https://portforward.com/">port forwarding guide</a></li>
+                <li><a href="https://github.com/fail2ban/fail2ban">fail2ban</a> (read docs, it doesn't run without some
+                    config)</li>
+                <li><a href="https://www.ice.gov/foia/odo-facility-inspections">ODO Ice Facility Inspections</a></li>
+                <li><a
+                        href="https://developer.mozilla.org/en-US/docs/Web/API/Document_Object_Model/Selection_and_traversal_on_the_DOM_tree">DOM
+                        selection and traversal tutorial</a> and <a
+                        href="https://developer.mozilla.org/en-US/docs/Web/CSS/Guides/Selectors">CSS selector</a>
+                    guide</a></li>
+                <li><a href="https://www.npmjs.com/package/node-html-parser">node-html-parser</a></li>
+                <li><a href="https://www.npmjs.com/package/exiftool-vendored">exiftool vendored</a></li>
+                <li><a href="https://github.com/ocrmypdf/ocrmypdf">ocrmypdf</a></li>
+                <li><img src="https://aphid.org/ct120/video/harumph.gif" height="200"></li>
+            </ul>
 
 
-        </section>
-        <section>
-            <h2>(not published yet)</h2>
-            <h2>🛜server🛜services🛜</h2>
-            <h3>cool tools two, server side edition</h3>
-            <video preload="metadata" controls crossorigin="anonymous"
-                data-src="https://aphid.org/ct120/video/service.mp4">
-                <!--  <track crossorigin="anonymous" kind="captions" data-src="https://aphid.org/ct120/video/service.en.vtt"
-                    srclang="en" default>
-                <track crossorigin="anonymous" kind="chapters" data-src="https://aphid.org/ct120/video/service.chapters.vtt"
-                    srclang="en" default>-->
-            </video>
-
-
-            <div id="notes">
-                <h3>links/notes</h3>
-                <ul>
-                    <li><a href="https://www.duckdns.org/">DuckDNS</a>, useful for having a persistent subdomain
-                        pointing
-                        at a
-                        home
-                        server (especially with an unstable IP address).</li>
-                    <li><a href="https://icecast.org/">icecast</a>, an a/v streaming server</li>
-                    <li><a
-                            href="https://dev.to/imsushant12/nginx-for-nodejs-applications-what-why-and-how-to-use-it-1gbn">using
-                            node with nginx</a> to host your own js-based services</li>
-                    <li><a href="https://www.liquidsoap.info/">liquidsoap</a>a language for procedural internet
-                        streaming</li>
-                </ul>
-            </div>
         </section>
     </section>
     <!-- start 2meta4me  -->
