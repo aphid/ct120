@@ -8,12 +8,33 @@
     <script src="toc.js" defer></script>
     <script src="chapters.js" defer></script>
     <style>
+
+        @property --gradient-hue {
+           syntax: '<angle>';
+           initial-value: 0deg;
+           inherits: false;
+        }
+
+        @keyframes slowHueShift {
+           0% {
+             --gradient-hue: 0deg;
+           }
+           100% {
+             --gradient-hue: 360deg;
+           }
+        }
+
         body {
             font-family: sans-serif;
             background: #DFC9DF;
-            background: radial-gradient(circle, rgba(223, 201, 223, 1) 0%, rgba(201, 223, 223, 1) 50%, rgba(206, 184, 206, 1) 100%);
-            margin: 0;
+              background: radial-gradient(circle, 
+                  hsl(calc(300deg + var(--gradient-hue)), 25%, 83%) 0%,   /* Center pastel pink */
+                  hsl(calc(180deg + var(--gradient-hue)), 25%, 83%) 50%,  /* Middle pastel cyan */
+                  hsl(calc(300deg + var(--gradient-hue)), 19%, 76%) 100%  /* Outer darker pastel pink */
+              );
+	    margin: 0;
             padding: 14px;
+	    animation: slowHueShift 450s linear infinite;
         }
 
         details {
@@ -656,9 +677,10 @@
                 src="https://aphid.org/ct120/video/ODO.mp4">
                 <track crossorigin="anonymous" kind="captions" src="https://aphid.org/ct120/video/ODO.en.vtt"
                     srclang="en" default>
-                <!--   <track crossorigin="anonymous" kind="chapters"
-                    src="https://aphid.org/ct120/video/raspberry.chapters.vtt" srclang="en" default>-->
+                 <track crossorigin="anonymous" kind="chapters"
+                    src="https://aphid.org/ct120/video/ODO.chapters.vtt" srclang="en" default>
             </video>
+            <p>this scraper was inspired by a CT student's work from the very first cohort of the program!</p>
 <h3>links/notes/errata</h3>
                 <ul>
                     <li>you can run all of this stuff on your laptop, home computer, or a VPS and it will go *much* faster than on my pi zero 2w</li>
