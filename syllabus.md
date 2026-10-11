@@ -29,11 +29,12 @@ An up to date version of this syllabus can be found at: https://aphid.github.io/
 
 ## Quick Links
 
-*   **[Course Canvas]()**
-*   **[Course Zoom]()**
+*   **[Course Canvas](https://canvas.ucsc.edu/courses/93093)**
+*   **[Course Zoom](https://canvas.ucsc.edu/courses/93093/external_tools/6680)**
 *   **[Videos](https://aphid.github.io/ct120/video/)**  //note, videos recorded during class are in the YuJa section on Canvas!
-*   **[Readings]()**
-*   **[Office Hour Info]()** (zoom links here)
+*   **[Readings](https://canvas.ucsc.edu/courses/93093/files/folder/Readings)**
+*   **[Office Hour Info](https://canvas.ucsc.edu/courses/93093/external_tools/6680)** (zoom links here)
+*   **[Cool Tools List](https://aphid.github.io/ct120/tools.html)** (crowdsourced across iterations of this class)
 
 ## Course Description
 
