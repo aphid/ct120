@@ -31,7 +31,7 @@ An up to date version of this syllabus can be found at: https://aphid.github.io/
 
 *   **[Course Canvas]()**
 *   **[Course Zoom]()**
-*   **[Videos](https://aphid.github.io/ct120/video/)  //note, stuff recorded during class is in the YuJa section on Canvas!
+*   **[Videos](https://aphid.github.io/ct120/video/)**  //note, videos recorded during class are in the YuJa section on Canvas!
 *   **[Readings]()**
 *   **[Office Hour Info]()** (zoom links here)
 
@@ -161,7 +161,7 @@ Unlike in CT 20, documentation isn't explicitly required as part of your turnins
 
 Documentation CAN stand in next to your code on a project you were unable to complete. To receive full credit in this situation, the documentation should communicate the intent of what you've been working on, what you suspect the problem is, and how you attempted to solve it (trial and error? online resources?). 
 
-Documentation can take the form of brief articulations of what you've been up to in the class. Document progress, difficulty, interest, confusion, accomplishments, and/or goals. **_Please_**: not all of the above week. These can be in the form of screenshares (video), screenshots (images), text (markdown), hypertext (html), pictures of handwriting, links to git commit messages, console.logs, voice messages. Also a good place to reflect on any readings. Try different modes throughout the quarter. 
+Documentation can take the form of brief articulations of what you've been up to in the class. Document progress, difficulty, interest, confusion, accomplishments, and/or goals. **_Please_**: not *all* of the above for any given week. These can be in the form of screenshares (video), screenshots (images), text (markdown), hypertext (html), pictures of handwriting, links to git commit messages, console.logs, voice messages. Also a good place to reflect on any readings. Try different modes throughout the quarter. 
 
 ## Code Review
 
