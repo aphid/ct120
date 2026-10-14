@@ -77,7 +77,7 @@ Player.prototype.separate = async function (but) {
         let vid2 = cont2.querySelector("video");
 
         vid2.currentTime = vid1.currentTime;
-
+        vid2.muted = true; 
         if (!vid1.paused) {
             vid2.play();
         }
